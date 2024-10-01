@@ -5,12 +5,7 @@ import time
 st.set_page_config(
     page_title="Music OCR",
     page_icon="📃",
-    layout="centered",
-    menu_items={
-        "Get Help": "https://www.linkedin.com/in/abhishek-kumar-annamraju/",
-        "Report a bug": "https://www.linkedin.com/in/abhishek-kumar-annamraju/",
-        "About": "# This is a simple Music OCR app that uses the power of AI to identify the music notes from the image of the music sheet. \n\n Developed by [Abhishek Kumar Annamraju](https://www.linkedin.com/in/abhishek-kumar-annamraju/)",
-    },
+    layout="centered"
 )
 
 st.title("📃 Music OCR")
@@ -20,8 +15,6 @@ st.write("Faça um upload de uma imagem para extrair as informações.")
 uploaded_file = st.file_uploader("Escolha uma imagem...", type="jpg")
 
 if uploaded_file:
-    st.write("Processando...")
-
     # Processamento da imagem
     with st.spinner("Processando..."):
         time.sleep(10)
